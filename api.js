@@ -22,10 +22,27 @@ $.ajax({
     function createagents(name,icon,id) {
       console.log(name,icon,id);
       console.log(list);
-      card.innerHTML+=`<div class="col-2 mt-5 mb-1" style="color:white" id="${id}"><img style="width:auto;height:70px; margin: 0 auto;" src="${icon}"><h3 style=" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; "><span style="style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" id='name-${id}'>${name}</span></h3> </img><div id="action"> <button onclick="Remove('${id}')" id="delete-${id}" class="btn btn-sm btn-danger"><img src="trash-bin.png" style="width:20px;"> </button>
+      list.innerHTML+=`<div class="col-sm-12 col-xs-12 col-md-2 mt-5 mb-1" style="color:white;" id="${id}">     
+      
+      <div class="card" style="background: rgb(10,10,10);
+background: radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(150,0,0,1) 100%);">
+      <div class="mx-auto">
+      <img style="width:auto;height:70px; margin: 0 auto;" src="${icon}">
+      </div>
+      <div class="mx-auto"> 
+      <h3 style=" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; "><span style="style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" id='name-${id}'>${name}</span></h3> </img>
+      </div>
+
+      <div class="mx-auto -mb-5">
+      <button onclick="Remove('${id}')" id="delete-${id}" class="btn btn-sm btn-danger"><img src="trash-bin.png" style="width:20px;"> </button>
       <button class="btn btn-sm btn-warning"   onclick="gizleGoster('${id}')" id="update-${id}"><img src="file.png" style="width:20px;  " > </button>
       <button class="btn btn-sm btn-success"  style="display:none;" onclick="update('${id}')" id="save-${id}"><img src="file.png" style="width:20px;  " > </button>
-        <input class="mt-2" type="text" id="edit-${id}"  style="border-radius:3px; border:0px;display:none; "> </div></div>  `
+        <input class="mt-2" type="text" id="edit-${id}"  style="border-radius:3px; border:0px;display:none; "> 
+      </div>
+      
+      </div>
+
+      <div id="action"> </div></div>  `
     }
 
 

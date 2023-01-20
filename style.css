@@ -1,17 +1,5 @@
 body
 {
-
-    background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(140,7,7,1) 100%);
-}
-#card
-{
-
-
- 
-
-}
-p
-{
-    
+    background: rgb(10,10,10);
+    background: radial-gradient(circle, rgba(10,10,10,1) 0%, rgba(103,0,0,1) 100%);
 }
